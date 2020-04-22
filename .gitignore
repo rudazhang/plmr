@@ -1,0 +1,44 @@
+# human-oriented files
+*.pdf
+
+# images
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.gif
+
+# temporary data
+/*.csv
+/*.tsv
+
+# extra data
+inst/extdata
+
+# R package data
+data/*.rd[as]
+
+# Raw data
+data-raw/
+# Analysis scripts
+script/
+
+# Rcpp generated files
+R/RcppExports.R
+src/RcppExports.cpp
+src/rcpp_hello_world.cpp
+
+# R project auto files
+.RData
+.Rhistory
+.Rproj.user
+man/
+
+# IDE project files
+.emacs.desktop*
+TAGS*
+*~
+
+## binary
+*.gz
+*.fst
