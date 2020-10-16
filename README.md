@@ -1,6 +1,6 @@
-# Sampling on Manifold
+# Probabilistic Learning on Manifold
 
-R pacakge `plmr` ("plumber"), Probabilistic Learning on Manifolds in R.
+R pacakge `plmr` ("plumber") implements methods for Probabilistic Learning on Manifolds in R.
 
 ## Manifest
 
@@ -27,3 +27,12 @@ Scripts for experiments and figures, `/script`:
 Documents, `/vignettes`:
 
 - `earthquake.md`, earthquake data description.
+
+## References
+
+- Data-driven probability concentration and sampling on manifold.
+C Soize, R Ghanem - Journal of Computational Physics, 2016.
+https://doi.org/10.1016/j.jcp.2016.05.044
+- Normal-bundle Bootstrap.
+R Zhang, R Ghanem - arXiv preprint, 2020.
+https://arxiv.org/abs/2007.13869

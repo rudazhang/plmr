@@ -89,7 +89,7 @@ MeanShift <- function(X, h, Y0 = NULL, minD = 1e-12, maxIter = 100L, silent = FA
 
 #' KDE-based Subspace Constrained Mean Shift
 #'
-#' Compuational complexity per step: O(M × N × n^3), where M is for every query point,
+#' Compuational complexity per step: O(M * N * n^3), where M is for every query point,
 #' N for every data point, n^3 for eigen-decomposition.
 #' If partial/truncated eigen-decomposition is used, the n^3 term would become d*n^2
 #' (e.g. the Lanczos algorithm, which further reduces by the sparsity of the matrix).
@@ -327,7 +327,7 @@ scmsMParzen <- function(Y0, X, model, sigma, h, r = NULL, minCos = 0.01, maxIter
 #' @param omega Stepsize relaxation factor, default to 1.
 #' @param returnV Whether to return the eigenvector at ridge; an (n,n,N) array.
 #' @return      Data.table of estimated density ridge.
-estimateRidge <- function(X0, d, sigma, omega = 1, maxStep = NULL,
+estimateRidge <- function(X0, d, sigma, minCos = 0.05, omega = 1, maxStep = NULL,
                           maxIter = 100L, returnV = FALSE, silent = FALSE) {
     X0 <- copy(X0)
     N <- nrow(X0)
@@ -335,7 +335,7 @@ estimateRidge <- function(X0, d, sigma, omega = 1, maxStep = NULL,
     R0 <- t(as.matrix(X0))
     X0[, outX := outlier(t(R0))]
     Xs <- t(as.matrix(X0[!(outX), -c("outX")]))
-    llog <- scms(R0, Xs, d = d, h = sigma, minCos = 0.05,
+    llog <- scms(R0, Xs, d = d, h = sigma, minCos = minCos,
                  omega = omega, maxStep = maxStep, maxIter = maxIter,
                  returnV = returnV, silent = silent)
     X0[, paste0("r", seq_len(n)) := as.data.table(t(llog$Y))]

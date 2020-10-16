@@ -52,8 +52,8 @@ MParzenRadiusTrain <- function(X, d, r) {
 
 #' Testing MParzen model
 #'
-#' Modified to add noise level $\min(σ, s_d)$ to the normal directions,
-#' instead of adding $σ^2$ to all directions.
+#' Modified to add noise level $\min(\sigma, s_d)$ to the normal directions,
+#' instead of adding $\sigma^2$ to all directions.
 #' @param y density evaluation point.
 #' @param X matrix of training data.
 #' @param model Top d-th order local covariance structure; output of `MParzenTrain()`.

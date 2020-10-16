@@ -3,7 +3,7 @@
 #' Expectations of some random variables.
 #'
 #' E|z|, absolute value of standard Gaussian.
-#' E(χ_2), Rayleigh distribution, or chi with 2 degrees of freedom, χ(2).
+#' E(x_2), Rayleigh distribution, or chi with 2 degrees of freedom, x(2).
 #' @keywords internal
 E <- list(absZ = sqrt(2/pi), X2 = sqrt(2) * gamma(3/2))
 

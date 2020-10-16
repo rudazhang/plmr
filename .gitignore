@@ -24,15 +24,15 @@ data-raw/
 script/
 
 # Rcpp generated files
-R/RcppExports.R
-src/RcppExports.cpp
-src/rcpp_hello_world.cpp
+# R/RcppExports.R
+# src/RcppExports.cpp
+# src/rcpp_hello_world.cpp
 
 # R project auto files
 .RData
 .Rhistory
 .Rproj.user
-man/
+# man/
 
 # IDE project files
 .emacs.desktop*
