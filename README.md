@@ -34,5 +34,5 @@ Documents, `/vignettes`:
 C Soize, R Ghanem - Journal of Computational Physics, 2016.
 https://doi.org/10.1016/j.jcp.2016.05.044
 - Normal-bundle Bootstrap.
-R Zhang, R Ghanem - arXiv, 2020.
-https://arxiv.org/abs/2007.13869
+R Zhang, R Ghanem - SIAM Journal on Mathematics of Data Science, 2021.
+https://doi.org/10.1137/20M1356002
