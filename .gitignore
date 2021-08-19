@@ -13,15 +13,15 @@
 /*.tsv
 
 # extra data
-inst/extdata
+# inst/extdata
 
 # R package data
-data/*.rd[as]
+/data/*.rd[as]
 
 # Raw data
-data-raw/
+/data-raw/
 # Analysis scripts
-script/
+/script/
 
 # Rcpp generated files
 # R/RcppExports.R
