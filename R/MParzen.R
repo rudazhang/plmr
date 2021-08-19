@@ -52,8 +52,8 @@ MParzenRadiusTrain <- function(X, d, r) {
 
 #' Testing MParzen model
 #'
-#' Modified to add noise level $\min(\sigma, s_d)$ to the normal directions,
-#' instead of adding $\sigma^2$ to all directions.
+#' Modified to add noise level \eqn{\min(\sigma, s_d)} to the normal directions,
+#' instead of adding \eqn{\sigma^2} to all directions.
 #' @param y density evaluation point.
 #' @param X matrix of training data.
 #' @param model Top d-th order local covariance structure; output of `MParzenTrain()`.
@@ -168,6 +168,7 @@ LOOCVParzenANLL <- function(X, sigma) {
 #' @param XTest  Test data.table.
 #' @param hlim   Range of bandwidth searching.
 #' @return Data.table: minimum, optimal bandwidth; objective, average negative log-likelihood (ANLL).
+#' @export
 MLBandwidth <- function(XTrain, XTest, hlim) {
     X <- as.matrix(XTrain)
     Y <- as.matrix(XTest)
@@ -178,6 +179,7 @@ MLBandwidth <- function(XTrain, XTest, hlim) {
 #' @param X    Data, data.table.
 #' @param hlim Range of bandwidth searching.
 #' @return Data.table: minimum, optimal bandwidth; objective, average negative log-likelihood (ANLL).
+#' @export
 LOOCVMLBandwidth <- function(X, hlim) {
     X <- as.matrix(X)
     as.data.table(optimize(LOOCVParzenANLL, hlim, X = X))

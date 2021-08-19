@@ -1,9 +1,15 @@
 #' Normal-bundle bootstrap.
+#'
+#' A direct implementation of NBB without using smooth frame.
 #' @param X0    Initial data/sample, a data.table: x, y.
 #' @param sigma KDE bandwidth for SCMS dynamical system.
 #' @param d     Dimension of density ridge.
 #' @param knn   Number of nearest neighbors to use, default to all.
 #' @return New data: I, index of ridge point; k, order of projection vector by distance on ridge.
+#' @references Algorithm 3.1 in [@ZhangRD2021nbb].
+#' @seealso \code{\link{scms}} for ridge estimation;
+#' \code{\link{SmoothFrame}} for smooth frame construction.
+#' @export
 NBB <- function(X0, sigma = NULL, d = 1L, knn = NULL) {
     N <- nrow(X0)
     if (is.null(sigma)) {

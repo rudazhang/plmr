@@ -1,8 +1,8 @@
 Package: plmr
 Title: Probabilistic Learning on Manifolds in R
 Description: R Implementation of methods for probabilistic learning on manifolds (PLoM),
-	     e.g. diffusion maps reduce basis MCMC sampling, ridge estimation,
-	     normal-bundle bootstrap, diffusion sampling, manifold scaffold,
+	     e.g. diffusion maps reduced basis MCMC sampling, ridge estimation,
+	     normal-bundle bootstrap (NBB), diffusion sampling, manifold scaffold,
 	     manifold-constrained inference, optimization, etc.
 Authors@R: person('Ruda', 'Zhang', , 'rudazhan@gmail.com', c('cre', 'aut'))
 URL: https://ruda.city/
@@ -14,7 +14,5 @@ Suggests:
 VignetteBuilder: knitr
 RoxygenNote: 7.1.1
 Depends: R (>= 3.3.0)
-Imports: data.table,
-    purrr,
-    testthat
+Imports: data.table
 Encoding: UTF-8

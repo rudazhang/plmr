@@ -30,7 +30,6 @@ its component in the "local normal space".}
 \value{
 A list: `Y`, the final points; `cosNormal`, convergence score;
                 `updatedPoints`, the number of updated points per update.
-Update a point by index.
 }
 \description{
 Using the log Manifold Parzen windows (MParzen) Gaussian KDE.

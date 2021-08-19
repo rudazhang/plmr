@@ -113,7 +113,8 @@ MeanShift <- function(X, h, Y0 = NULL, minD = 1e-12, maxIter = 100L, silent = FA
 #'                 `lambdaNormal`, largest Hessian eigenvalue in the normal space;
 #'                 `eigengap`, d-th eigengap of the Hessian;
 #'                 `updatedPoints`, the number of updated points per update;
-#' @references @Ozertem2011
+#' @references [@Ozertem2011]
+#' @export
 scms <- function(Y0, X, d, h, log = TRUE, r = NULL, omega = 1, maxStep = NULL,
                  minCos = 0.01, maxIter = 100L, returnV = FALSE, silent = FALSE) {
     ## N <- ncol(X)
@@ -131,8 +132,8 @@ scms <- function(Y0, X, d, h, log = TRUE, r = NULL, omega = 1, maxStep = NULL,
     ## Prepare coordinate-cosine matrix for updates later.
     Yc <- rbind(Y0, matrix(rep(NA_real_, M * extraVars), extraVars))
     if (returnV) V <- array(rep(NA_real_, n * n * M), c(n, n, M))
-    #' Update a point by index.
-    #' Return new coordinates and cosine between gradient and local normal space.
+    ## Update a point by index.
+    ## Return new coordinates and cosine between gradient and local normal space.
     updatePoint <- function(i) {
         y <- Yc[seq_len(n), i]
         idNN <- neighbor[[i]]
@@ -252,7 +253,7 @@ scmsMParzen <- function(Y0, X, model, sigma, h, r = NULL, minCos = 0.01, maxIter
     }
     ## Prepare coordinate-cosine matrix for updates later.
     Yc <- rbind(Y0, rep(NA_real_, M))
-    #' Update a point by index.
+    ## Update a point by index.
     ## Return new coordinates and cosine between gradient and local normal space.
     updatePoint <- function(i) {
         y <- Yc[-nrow(Yc), i]
@@ -327,6 +328,7 @@ scmsMParzen <- function(Y0, X, model, sigma, h, r = NULL, minCos = 0.01, maxIter
 #' @param omega Stepsize relaxation factor, default to 1.
 #' @param returnV Whether to return the eigenvector at ridge; an (n,n,N) array.
 #' @return      Data.table of estimated density ridge.
+#' @export
 estimateRidge <- function(X0, d, sigma, minCos = 0.05, omega = 1, maxStep = NULL,
                           maxIter = 100L, returnV = FALSE, silent = FALSE) {
     X0 <- copy(X0)

@@ -20,8 +20,8 @@ i.e. marginal standard deviation of an isotropic Gaussian. Should be greater tha
 Manifold Parzen estimator at the evaluation point.
 }
 \description{
-Modified to add noise level $\min(\sigma, s_d)$ to the normal directions,
-instead of adding $\sigma^2$ to all directions.
+Modified to add noise level \eqn{\min(\sigma, s_d)} to the normal directions,
+instead of adding \eqn{\sigma^2} to all directions.
 }
 \references{
 @Vincent2002

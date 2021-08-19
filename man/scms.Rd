@@ -61,7 +61,5 @@ In the return, `lambdaNormal` and `eigengap` are both useful for checking
 if the final point is a ridge point.
 }
 \references{
-@Ozertem2011
-Update a point by index.
-Return new coordinates and cosine between gradient and local normal space.
+[@Ozertem2011]
 }
