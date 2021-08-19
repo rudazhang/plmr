@@ -1,4 +1,3 @@
 ^LICENSE\.md$
-/script
-/data-raw
-/plot+data
+^script$
+^plot+data$

@@ -22,6 +22,7 @@
 /data-raw/
 # Analysis scripts
 /script/
+/plot+data/
 
 # Rcpp generated files
 # R/RcppExports.R
